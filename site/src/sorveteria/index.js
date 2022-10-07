@@ -14,7 +14,7 @@ export default function Index(){
     }
 
     return(
-        <main>
+        <main className='main'>
             <h1> Sorveteria Mil e Mel </h1>
             <p> Preço do sorvete pelas gramas </p>
 

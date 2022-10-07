@@ -20,7 +20,7 @@ export default function Index(){
 
 
     return(
-        <main>
+        <main className='main'>
             <h1>Açai do Vitão</h1>
             <p>Açai Pequeno = 13,50</p>
             <p>Açai Medio = 15,00</p>
@@ -34,7 +34,7 @@ export default function Index(){
             </div>
 
             <div>
-                Quantidade de Açao Medio :
+                Quantidade de Açai Medio :
                 <input type='text' value={qtdMed} onChange={e => setQtdMed(Number(e.target.value))} />
             </div>
 

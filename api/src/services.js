@@ -1,5 +1,4 @@
 
-
 export function precoAcai(qtdPeq, qtdMed, qtdGra, desc){
     let peq = qtdPeq * 13.50;
     let med = qtdMed * 15.00;
@@ -14,15 +13,14 @@ export function precoAcai(qtdPeq, qtdMed, qtdGra, desc){
     return aposDesconto;
 }
 
-
 export function verificarLibra(dia, mes){
     let msg = ""
 
     if(dia >= 23 && dia <= 30 && mes == "setembro" ||dia > 0 && dia <= 22 && mes == "outubro" ){
-        msg = "Sim"
+        msg = " O seu signo é libra"
     }
     else{
-        msg = "Não"
+        msg = "Você não é libriano"
     }
 
     return msg;
@@ -42,3 +40,4 @@ export function sorveteria(gramas){
 
     return total
 }
+
