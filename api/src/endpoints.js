@@ -1,6 +1,6 @@
 import{Router} from 'express'
 
-import { precoAcai, sorveteria, verificarLibra } from './services.js'
+import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura } from './services.js'
 
 const server = Router();
 
@@ -41,6 +41,43 @@ server.post('/sorveteria', (req,resp) => {
     }
     catch(err){
 
+    }
+})
+
+
+server.post('/salarioLiquido', (req, resp) =>{
+    try {
+        const {salario, bonus, desc} = req.body;
+        const x = salarioLiquido(salario,bonus,desc);
+        resp.send({
+            x:x
+        })
+    } catch (err) {
+        
+    }
+})
+
+server.post('/abastecer', (req,resp) =>{
+    try {
+        const { capac, consumo, dist } = req.body;
+        const x = paradasAbastecer(capac, consumo, dist);
+        resp.send({
+            x:x
+        })
+    } catch (err) {
+        
+    }
+})
+
+server.get('/temperatura/:temperatura', (req,resp) =>{
+    try {
+        const temperatura = req.params.temperatura;
+        const x = verTemperatura(temperatura);
+        resp.send({
+            x:x
+        })
+    } catch (err) {
+        
     }
 })
 

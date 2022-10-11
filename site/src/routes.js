@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Sorveteria from './sorveteria'
 import Acai from './acai'
 import Libra from './libra'
+import Temperatura from './temperatura'
+import Salario from './salario'
+import Parada from './paradas'
 
 import App from './App.js'
 
@@ -14,6 +17,9 @@ export default function index(){
             <Route path='/sorveteria' element={<Sorveteria/>} />
             <Route path='/acai' element={<Acai/>} />
             <Route path='libra' element={<Libra/>} />
+            <Route path='/temperatura' element={<Temperatura/>} />
+            <Route path='/salario' element={<Salario/>} />
+            <Route path='/paradas' element={<Parada/>} />
         </Routes>
     </BrowserRouter>
     )

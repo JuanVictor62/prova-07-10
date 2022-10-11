@@ -41,3 +41,49 @@ export function sorveteria(gramas){
     return total
 }
 
+
+
+
+
+
+export function salarioLiquido(salario, bonus, desc){
+    let salarioComBonus = salario + ((bonus * salario) / 100 );
+    let resul = salarioComBonus - desc;
+    return resul
+}
+
+export function paradasAbastecer(capac, consumo, dist){
+    if(dist / consumo < capac){
+        return 1
+    }
+    else if((dist / consumo) > capac){
+        return 2
+    }
+}
+
+export function verTemperatura(temperatura){
+    let msg = ""
+    if(temperatura <= 36){
+        msg = "Hiportemia"
+    }
+
+    else if(temperatura >= 36 && temperatura < 37.6){
+        msg = "Normal"
+    }
+    
+    else if(temperatura >= 37.6 && temperatura < 39.6){
+        msg = "Febre"
+    }
+
+    else if(temperatura >= 39.6 && temperatura < 41){
+        msg = "Febre Alta"
+    }
+
+    else if(temperatura >= 41){
+        msg = "Hipotermia"
+    }
+
+    return msg
+
+}
+
