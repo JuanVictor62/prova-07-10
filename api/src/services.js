@@ -87,3 +87,56 @@ export function verTemperatura(temperatura){
 
 }
 
+
+
+export function verOrcamento(ganhos, gastos){
+    let msg = '';
+    // if(gastos > ganhos){
+    //     msg = 'Orçamento comprometido! Hora de rever seus gastos!';
+    // }
+    // else if(gastos >= ((ganhos * 81) / 100) || gastos <= ((ganhos * 100) / 100)  ){
+    //     msg = ' Cuidado, seu orçamento pode ficar comprometido!' ;
+    // }
+    // else if(gastos >= ((ganhos * 51) / 100) || gastos <= ((ganhos * 80) / 100) ){
+    //     meg = 'Ateção, melhor conter seus gastos!'
+    // }
+    // else if(gastos >= ((ganhos * 51) / 100) || gastos <= ((ganhos * 80) / 100) ){
+    //     meg = 'Muito bem, seus gastos são menores que seus ganhos!'
+    // }
+
+    let conta = (gastos * 100) / ganhos;
+
+    if(conta > 100){
+        msg = "Orçamento compromeito! Hora de rever seus gastos!";
+    }
+
+    else if(conta >= 81 && conta < 100){
+        msg = ' Cuidado, seu orçamento pode ficar comprometido!';
+    }
+    else if(conta >= 51 && conta <= 80){
+        msg = 'Atenção, melhor conter seus gastos!'
+    }
+    else if(conta >= 21 && conta <= 50){
+        msg = 'Muito bem, seus gastos não ultrapassam metade dos ganhos!'
+    }
+    else if(conta >= 0 && conta <= 20){
+        msg = 'Parabens, esta gerenciando bem seu orçamento!'
+    }
+    return msg;
+}
+
+export function verCinema(inteiras, meias, diaSemana, internacional){
+    
+    if( internacional == true){
+        return (inteiras + meias) * 5;
+    }
+    else if(diaSemana == true){
+        return (inteiras + meias) * 14.25;
+    }
+
+    else{
+        return (inteiras * 28.5) * (meias * 14.25);
+    }
+
+
+    }

@@ -13,7 +13,8 @@ export default function Index(){
             mes: mes
         })
 
-        setResposta(resp.data.x)
+        setResposta(resp.data.
+            x)
     }
     return(
         <main className='main'>

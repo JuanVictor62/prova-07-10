@@ -11,6 +11,9 @@ function App() {
           <a href='/salario'> Salario</a>
           <a href='/parada'> Paradas Abastecimento</a>
           <a href='/temperatura'> Temperatura</a>
+          <a href='/ingresso'> Ingresso</a>
+          <a href='/orcamento'> Orcamento</a>
+          
     </div>
   );
 }
