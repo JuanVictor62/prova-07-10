@@ -13,6 +13,8 @@ function App() {
           <a href='/temperatura'> Temperatura</a>
           <a href='/ingresso'> Ingresso</a>
           <a href='/orcamento'> Orcamento</a>
+          <a href='/contarAte' >Contar até</a>
+          <a href='/linha' >Linhas com Asteriscos</a>
           
     </div>
   );

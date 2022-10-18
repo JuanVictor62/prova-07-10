@@ -1,6 +1,6 @@
 import{Router} from 'express'
 
-import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema, ContarAte } from './services.js'
+import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema, ContarAte, linha, retangulo } from './services.js'
 
 const server = Router();
 
@@ -119,5 +119,29 @@ server.post('/contar', (req,resp) => {
     }
 })
 
+server.get('/linha/:qtd', (req,resp) => {
+    try {
+        const qtd = req.params.qtd;
+        const resposta = linha(qtd);
+        resp.send({
+            resposta:resposta
+        })
+    } catch (err) {
+        
+    }
+})
+
+server.post('/retangulo', (req,resp) => {
+    try {
+        const {base, altura} = req.body;
+        const resposta = retangulo(base, altura)
+        resp.send({
+            resposta: resposta
+        })
+
+    } catch (err) {
+        
+    }
+})
 
 export default server;

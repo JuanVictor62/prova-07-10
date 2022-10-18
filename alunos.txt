@@ -1,4 +1,4 @@
 Nomes = Juan Victor Condori Chambi
         Victor Gabriel Rodrigues Silva
 
-        Informatica
+        Informatica B

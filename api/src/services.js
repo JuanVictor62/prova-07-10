@@ -149,3 +149,23 @@ export function ContarAte(inicio, fim){
     console.log(resp)
     return [resp];
 }
+
+export function linha(qtd){
+    let resp = [];
+    for(let cont = 1; cont <= qtd; cont++){
+        resp = [...resp, "* "]
+    }
+
+    return [resp];
+}
+
+export function retangulo(base, altura){
+    let resp = [];
+    for(let linha = 1; linha <= altura; linha++){
+        for(let coluna = 1; coluna <= base; coluna++){
+            resp = [...resp, "* "]
+        }
+    }
+    
+    return [resp];
+}

@@ -10,6 +10,7 @@ import Orcamento from './orcamento'
 import Ingresso from './ingresso' 
 import ContarAte from './contarAte' 
 import App from './App.js'
+import Linha from './linha'
 
 export default function index(){
     return(
@@ -25,6 +26,7 @@ export default function index(){
             <Route path='/orcamento' element={< Orcamento />} />
             <Route path='/ingresso' element={< Ingresso />} />
             <Route path='/contarAte' element={< ContarAte />} />
+            <Route path='/linha' element={< Linha />} />
         </Routes>
     </BrowserRouter>
     )

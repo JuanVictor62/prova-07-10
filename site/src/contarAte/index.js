@@ -31,7 +31,7 @@ export default function Index(){
 
             <div>
                 {resposta.map(item =>
-                    <p>resposta: {item}</p>
+                    <p>resposta: {item.resposta}</p>
                 )}
             </div>
           
