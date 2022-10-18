@@ -15,7 +15,7 @@ export default function Index(){
             qtdGra: qtdGra,
             desc: desc
         })
-        setTotal(resp.data.x);
+        setTotal(resp.data.resposta);
     }
 
 

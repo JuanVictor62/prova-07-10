@@ -15,7 +15,7 @@ export default function Paradas(){
             dist
         })
 
-        setTotal(resp.data.x);
+        setTotal(resp.data.resposta);
     }
 
     return(

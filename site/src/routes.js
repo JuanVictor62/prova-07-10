@@ -8,6 +8,7 @@ import Salario from './salario'
 import Parada from './paradas'
 import Orcamento from './orcamento'
 import Ingresso from './ingresso' 
+import ContarAte from './contarAte' 
 import App from './App.js'
 
 export default function index(){
@@ -23,6 +24,7 @@ export default function index(){
             <Route path='/paradas' element={< Parada />} />
             <Route path='/orcamento' element={< Orcamento />} />
             <Route path='/ingresso' element={< Ingresso />} />
+            <Route path='/contarAte' element={< ContarAte />} />
         </Routes>
     </BrowserRouter>
     )

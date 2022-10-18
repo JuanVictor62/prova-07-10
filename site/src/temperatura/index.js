@@ -9,7 +9,7 @@ export default function Temperatura(){
 
     async function verTemperatura(){
         const resp = await axios.get('http://localhost:5000/temperatura/' + temperatura);
-        setTotal(resp.data.x)
+        setTotal(resp.data.resposta)
     }
 
     return(

@@ -10,7 +10,7 @@ export default function Index(){
             gramas: gramas
         })
 
-        setTotal(resp.data.x)
+        setTotal(resp.data.resposta)
     }
 
     return(

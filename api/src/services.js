@@ -137,6 +137,15 @@ export function verCinema(inteiras, meias, diaSemana, internacional){
     else{
         return (inteiras * 28.5) * (meias * 14.25);
     }
+}
 
+export function ContarAte(inicio, fim){
+    let resp = [];
 
+    for(let i = inicio; i <= fim; i++){
+        resp = [...resp, i];
     }
+ 
+    console.log(resp)
+    return [resp];
+}

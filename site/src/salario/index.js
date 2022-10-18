@@ -15,7 +15,7 @@ export default function Salario(){
             desc
         })
 
-        setTotal(resp.data.x)
+        setTotal(resp.data.resposta)
     }
     return(
         <main>

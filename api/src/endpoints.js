@@ -1,6 +1,6 @@
 import{Router} from 'express'
 
-import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema } from './services.js'
+import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema, ContarAte } from './services.js'
 
 const server = Router();
 
@@ -99,6 +99,18 @@ server.post('/verCinema', (req,resp) => {
     try {
         const {inteiras, meias, diaSemana, internacional} = req.body;
         const resposta = verCinema(inteiras, meias, diaSemana, internacional);
+        resp.send({
+            resposta: resposta
+        })
+    } catch (err) {
+        
+    }
+})
+
+server.post('/contar', (req,resp) => {
+    try {
+        const {comeco, fim} = req.body;
+        const resposta = ContarAte(comeco, fim);
         resp.send({
             resposta: resposta
         })
