@@ -15,6 +15,7 @@ function App() {
           <a href='/orcamento'> Orcamento</a>
           <a href='/contarAte' >Contar até</a>
           <a href='/linha' >Linhas com Asteriscos</a>
+          <a href='/retangulo' >Retangulo</a>
           
     </div>
   );

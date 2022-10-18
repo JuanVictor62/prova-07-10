@@ -11,6 +11,7 @@ import Ingresso from './ingresso'
 import ContarAte from './contarAte' 
 import App from './App.js'
 import Linha from './linha'
+import Retangulo from './retangulo'
 
 export default function index(){
     return(
@@ -27,6 +28,7 @@ export default function index(){
             <Route path='/ingresso' element={< Ingresso />} />
             <Route path='/contarAte' element={< ContarAte />} />
             <Route path='/linha' element={< Linha />} />
+            <Route path='/retangulo' element={< Retangulo />} />
         </Routes>
     </BrowserRouter>
     )
