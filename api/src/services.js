@@ -169,3 +169,24 @@ export function retangulo(base, altura){
     
     return [resp];
 }
+
+export function queroCafe(n, l, d){
+    let msg = "";
+    let cont = n * d;
+   
+    let vlCap = l;
+    if(cont > 1000){
+
+        cont = cont / 1000;
+        for(let i = 0;  cont > l; i++){
+            l = l + vlCap;
+        }
+        return l;
+    }
+    else if(l < cal){
+        return msg = "Quantidade de café é insuficiente"
+    }
+
+    return cont;
+    
+}

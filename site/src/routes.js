@@ -12,6 +12,7 @@ import ContarAte from './contarAte'
 import App from './App.js'
 import Linha from './linha'
 import Retangulo from './retangulo'
+import Cafe from './queroCafé'
 
 export default function index(){
     return(
@@ -29,6 +30,7 @@ export default function index(){
             <Route path='/contarAte' element={< ContarAte />} />
             <Route path='/linha' element={< Linha />} />
             <Route path='/retangulo' element={< Retangulo />} />
+            <Route path='/cafe' element={< Cafe />} />
         </Routes>
     </BrowserRouter>
     )

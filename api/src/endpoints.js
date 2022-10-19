@@ -1,6 +1,6 @@
 import{Router} from 'express'
 
-import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema, ContarAte, linha, retangulo } from './services.js'
+import { precoAcai, sorveteria, verificarLibra, salarioLiquido, paradasAbastecer, verTemperatura, verOrcamento, verCinema, ContarAte, linha, retangulo, queroCafe } from './services.js'
 
 const server = Router();
 
@@ -135,6 +135,19 @@ server.post('/retangulo', (req,resp) => {
     try {
         const {base, altura} = req.body;
         const resposta = retangulo(base, altura)
+        resp.send({
+            resposta: resposta
+        })
+
+    } catch (err) {
+        
+    }
+})
+
+server.post('/cafe', (req,resp) => {
+    try {
+        const {n, l, d} = req.body;
+        const resposta = queroCafe(n, l, d);
         resp.send({
             resposta: resposta
         })

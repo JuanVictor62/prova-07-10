@@ -16,6 +16,7 @@ function App() {
           <a href='/contarAte' >Contar até</a>
           <a href='/linha' >Linhas com Asteriscos</a>
           <a href='/retangulo' >Retangulo</a>
+          <a href='/cafe' >Quero Cafe Caralho</a>
           
     </div>
   );
