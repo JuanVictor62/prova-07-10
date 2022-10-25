@@ -157,4 +157,19 @@ server.post('/cafe', (req,resp) => {
     }
 })
 
+
+server.post('/mediaSala', (req,resp) => {
+    try {
+        const {alunos} = req.body;
+        const resposta = qtdAlunos(alunos);
+        resp.send({
+            resposta: resposta
+        })
+
+    } catch (err) {
+        
+    }
+})
+
+
 export default server;

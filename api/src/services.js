@@ -190,3 +190,28 @@ export function queroCafe(n, l, d){
     return cont;
     
 }
+
+export function qtdAlunos(alunos){
+    let mediaSala = 0;
+    let resp = [];
+    for(let x = 0; x <= alunos; x++){
+        resp = [...resp, x];
+    }
+
+    return [resp];
+    // mediaSala = [...alunos, alunos + alunos] / alunos;
+    // let mediaSala = resp.reduce(() =>)
+
+    // const valorInicial = 0;
+    // const somaInicial = resp.reduce(
+    // (valorFinal, valorAtual ) => valorFinal + valorAtual,
+    // valorInicial
+    // );
+
+    // let soma = alunos.reduce(function(soma, resp) {
+    //     return soma + resp;
+    // });
+    console.log(soma);
+    
+    console.log(resp);
+}
