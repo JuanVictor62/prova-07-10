@@ -1,57 +1,33 @@
 import './index.scss'
 import { useState } from 'react'
+import { calcMaior, calcMedia, calcMenor, criarArray } from './services';
 
 export default function Index(){
-    const [ alunos, setAlunos ] = useState();
-    const [ qtdAlunos, setQtdAlunos] = useState();
-    const [ resp, setResp] = useState([]);
-    const [ nota, setNota] = useState();
-    const [ notas, setNotas] = useState();
+    const [qtd, setQtd] = useState(0);
+    const [notasAlunos, setNotasAlunos] = useState([]);
+    const [media, setMedia] = useState(0);
+    const [maior, setMaior] = useState(0);
+    const [menor, setMenor] = useState(0);
 
-    const [total, setTotal] = useState();
-    
-    function mediaSala(){
-    let mediaSala = 0;
-    let resp = [];
-    for(let x = 1; x <= qtdAlunos; x++){
-        resp = [...resp, x];
-        setResp(resp);
+    function okQtd(){
+        const x = criarArray(qtd);
+        setNotasAlunos(x);
     }
 
-    console.log(resp);
-    return [resp];
-
-    function adicionarNotas(){
-        let n = nota;
-        return setNotas(...notas, n)
-        
+    function alterar(pos, novoValor){
+        notasAlunos[pos] = Number(novoValor);
+        setNotasAlunos([...notasAlunos]);
     }
-    
-    // mediaSala = [...alunos, alunos + alunos] / alunos;
-    // let mediaSala = resp.reduce(() =>)
 
-    // const valorInicial = 0;
-    // const somaInicial = resp.reduce(
-    // (valorFinal, valorAtual ) => valorFinal + valorAtual,
-    // valorInicial
-    // );
+    function calcular(){
+        const a = calcMedia(notasAlunos);
+        const b = calcMaior(notasAlunos);
+        const c = calcMenor(notasAlunos);
 
-    // let soma = alunos.reduce(function(soma, resp) {
-    //     return soma + resp;
-    // });
-    
-}
-
-function calcular(){
-    let soma = 0;
-    for(var i = 0; i < resp.length; i++) {
-        soma += resp[i];
-        setTotal(soma);
+        setMedia(a);
+        setMaior(b);
+        setMenor(c);
     }
-    let resultado = soma / qtdAlunos;
-    setTotal(resultado)
-}
-
 
 
     return(
@@ -61,22 +37,32 @@ function calcular(){
             </div>
 
             <div>
-                <input value={qtdAlunos} onChange={e => setQtdAlunos(e.target.value)} />
-                <button onClick={mediaSala} >Ok</button>
+                Quantidade de Alunos: <input type="text" value={qtd} onChange={e => setQtd(e.target.value)} />
+                <button onClick={okQtd} > ok</button>
+
             </div>
-    
-            {resp.map((item, i) => 
+
+            {notasAlunos.map((item, pos) =>
                 <div>
-                    <p>Aluno {i + 1} : </p>
-                    <input value={nota} onChange={e => setNota(adicionarNotas((e.target.value)))} />
-                </div>
+                    Aluno {pos + 1} <input type="text" value={notasAlunos[pos]} onChange={e => alterar(pos, e.target.value)} />                </div>
             )}
 
-                <button onClick={calcular} >Calcular</button>
+            <div>
+                <button onClick={calcular} > Calcular </button>
+            </div>
 
-                <div>
-                    {total}
-                </div>
+            <div>
+                Media: {media}
+            </div>
+
+            <div>
+                Maior: {maior}
+            </div>
+
+            <div> 
+                Menor: {menor}
+            </div>
+
         </main>
     )
 }
